@@ -8,12 +8,12 @@ export default class ProductModel {
     this.connection = connection;
   }
 
-  //  public async getAll(): Promise<IProduct[]> {
-  //    const result = await this.connection
-  //      .execute('SELECT * FROM product');
-  //    const [rows] = result;
-  //    return rows as IProduct[];
-  //  }
+  public async getAll(): Promise<IProduct[]> {
+    const result = await this.connection
+      .execute('SELECT * FROM Trybesmith.Products');
+    const [rows] = result;
+    return rows as IProduct[];
+  }
 
   public async create(product: IProduct): Promise<IProduct> {
     const { name, amount } = product;
