@@ -6,5 +6,4 @@ export interface IProduct {
   orderId: number;
 }
 
-// export type IProductIds = { productIds: string };
 export default IProduct;
